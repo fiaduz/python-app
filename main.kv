@@ -1,0 +1,173 @@
+
+<MyScreenManager>:
+    id: screen_manager
+
+    GameScreen:
+        name: 'game_screen'
+        manager: screen_manager
+
+<GameScreen>:
+    spacing: 10
+   # size_hint: (None, None)  # Disable automatic sizing
+    size: 800, 1000  # Set the size of the window
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1  # Set the background color of the parent
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            # pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Center the GameScreen
+
+    orientation: 'vertical'
+    Image:
+        source: 'bg.jpg'
+        allow_stretch: True
+        keep_ratio: False
+        # size_hint: 1, 1  # Full size
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # Centered
+
+    # TextInput:
+    #     id: my_input
+    #     input_type: 'number'
+    #     hint_text: 'Enter a number'
+    BoxLayout:
+        halign: 'center'
+        spacing: 10
+        orientation: 'vertical'
+        Label:
+            id: my_label
+            text: "[b]Started...[/b]"
+            color: 1,1,1, 1
+            # background_color: 1,1,1,1
+            font_size: 72
+            markup: True
+        BoxLayout:
+            spacing: 10
+            # background_color: 1,1,1,1
+            orientation: 'horizontal'
+            Button:
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+                font_size: 40
+                id: my_button1
+                text: ''
+                background_color: 1,1,1,1
+                # background_normal: 'bg.jpg'
+                # background_down: 'bg.jpg'
+                on_press: root.my_button1_press()
+            Button:
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+                font_size: 40
+                id: my_button2
+                text: ''
+                background_color: 'black'
+                on_press: root.my_button2_press()
+            Button:
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+                font_size: 40        
+                id: my_button3
+                text: ''
+                background_color: 'white'
+                on_press: root.my_button3_press()
+
+        BoxLayout:
+            spacing: 10
+            background_color: 1,1,1,1
+            orientation: 'horizontal'
+                
+
+
+            Button:
+                font_size: 40
+                id: my_button4
+                text: ''
+                background_color: 'black'
+                on_press: root.my_button4_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+            Button:
+                font_size: 40
+                id: my_button5
+                text: ''
+                background_color: 'white'
+                on_press: root.my_button5_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+            Button:
+                font_size: 40
+                id: my_button6
+                text: ''
+                background_color: 'black'
+                on_press: root.my_button6_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+
+        BoxLayout:
+            spacing: 10
+            background_color: 1,1,1,1
+            orientation: 'horizontal'
+                
+
+
+            Button:
+                font_size: 40      
+                id: my_button7
+                text: ''
+                background_color: 'white'
+                on_press: root.my_button7_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+            Button:
+                font_size: 40
+                id: my_button8
+                text: ''
+                background_color: 'black'
+                on_press: root.my_button8_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+            Button:
+                font_size: 40
+                id: my_button9
+                text: ''
+                background_color: 'white'
+                on_press: root.my_button9_press()
+                size_hint_y: None
+                size_hint_x: None
+                height: 200
+                width: 200
+
+        BoxLayout:
+            orientation: 'horizontal'
+            height: 20
+
+            Button:
+                text: 'Reset'
+                background_color: 1, 1, 0, 1
+                halign: 'center'
+                id: reset_button
+                font_size: 30
+                on_press: root.reset_btn()
+                size_hint_y: None
+                size_hint_x: None
+                height: 150  # Adjust the height as needed
+                width: 300
+
